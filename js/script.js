@@ -1,6 +1,5 @@
 {
-
- const playGame = function(playerChoise){clearMessages()
+    const playGame = function(playerChoise){clearMessages()
     const getMoveName = function(argMoveId){
             if(argMoveId == 1){
             return 'kamień';
@@ -24,28 +23,27 @@
         console.log('Wylosowana liczba to: ' + randomNumber);  
         printMessage('Mój ruch to: ' + argComputerMove); 
     
-        
         const displayResult = function(argComputerMove, argPlayerMove){
             if(argComputerMove == 'kamień' && argPlayerMove == 'papier'){
-                printMessage('Ty wygrywasz!');
+                printMessage('Wygrywasz!');
             } else if(argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
-                printMessage('Ty wygrywasz!');  
+                printMessage('Wygrywasz!');  
             } else if(argComputerMove == 'nożyce' && argPlayerMove == 'kamień'){
-                printMessage('Ty wygrywasz!');  
+                printMessage('Wygrywasz!');  
             } else if(argComputerMove == 'papier' && argPlayerMove == 'kamień'){
-                printMessage('Wygrał komputer');  
+                printMessage('Przegrywasz!');  
             } else if(argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
-                printMessage('Wygrał komputer');  
+                printMessage('Przegrywasz!');  
             } else if(argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
-                printMessage('Wygrał komputer');  
+                printMessage('Przegrywasz!');  
             } else if(argComputerMove == 'kamień' && argPlayerMove == 'kamień'){
-                printMessage('Nikt nie wygrywa - remis');  
+                printMessage('Remis!');  
             } else if(argComputerMove == 'papier' && argPlayerMove == 'papier'){
-                printMessage('Nikt nie wygrywa - remis');  
+                printMessage('Remis!');  
             } else if(argComputerMove == 'nożyce' && argPlayerMove == 'nożyce'){
-                printMessage('Nikt nie wygrywa - remis');  
+                printMessage('Remis!');  
             } else {
-                printMessage('Wybrałeś złą liczbę - wpisz poprawną');
+                printMessage('Zły wybór! Wybierz poprawną liczbę!');
             }
         }
         console.log('Ruchy: Twój - ' + argComputerMove, ', Komputer - ' + argPlayerMove);
