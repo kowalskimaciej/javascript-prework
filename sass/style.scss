@@ -1,11 +1,12 @@
 body {
       text-align: center;
+
 }
 
 button {
       font-size: 30px;
       padding: 15px;
-      margin: 0 30px;
+      margin: 30px 30px;
       border: 5px solid black;
       cursor: pointer;
 }
@@ -16,5 +17,5 @@ button:hover {
 
 #messages {
       font-size: 20px;
-      margin-top: 20px;
+      margin-top: 50px;
 }
