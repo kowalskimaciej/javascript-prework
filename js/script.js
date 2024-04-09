@@ -1,6 +1,7 @@
-const playGame = function(playerChoice) {
-    clearMessages();
-    
+{
+    const playGame = function(playerChoice) {
+            clearMessages();
+        
     const getMoveName = function(moveId) {
         if (moveId == 1) {
             return 'kamień';
@@ -17,10 +18,10 @@ const playGame = function(playerChoice) {
     const playerMove = getMoveName(playerChoice);
     const randomNumber = Math.floor(Math.random() * 3 + 1);
     const computerMove = getMoveName(randomNumber);
-    
+        
     printMessage('Twój ruch to: ' + playerMove);
     printMessage('Mój ruch to: ' + computerMove);
-    
+        
     const displayResult = function(computerMove, playerMove) {
         if (computerMove == 'kamień' && playerMove == 'papier') {
             printMessage('Wygrywasz!');
@@ -44,18 +45,19 @@ const playGame = function(playerChoice) {
             printMessage('Zły wybór! Wybierz poprawną liczbę!');
         }
     };
-    
+        
     displayResult(computerMove, playerMove);
-};
+    };
 
-document.getElementById('play-rock').addEventListener('click', function() {
-    playGame(1);
-});
+    document.getElementById('play-rock').addEventListener('click', function() {
+        playGame(1);
+    });
 
-document.getElementById('play-paper').addEventListener('click', function() {
-    playGame(2);
-});
+    document.getElementById('play-paper').addEventListener('click', function() {
+        playGame(2);
+    });
 
-document.getElementById('play-scissors').addEventListener('click', function() {
-    playGame(3);
-});
+    document.getElementById('play-scissors').addEventListener('click', function() {
+        playGame(3);
+    });
+}
